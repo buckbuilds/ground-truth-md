@@ -1,0 +1,62 @@
+# ground-truth.md
+
+A `ground-truth.md` file is the source of truth for any project. It stops your AI assistant from guessing, restarting, forgetting context, or building before you've approved the direction.
+
+## Quickstart
+
+1. Copy [`templates/ground-truth.md`](./templates/ground-truth.md) into the root of your project.
+2. Open it with your AI assistant. Answer the 25 planning questions, one at a time.
+3. When the questions are done, your AI assistant will summarize what is known, list any remaining gaps, and ask: "Do I have your permission to start working from this ground truth and chunk plan?"
+
+## How it works
+
+### 1. Purpose
+
+A `ground-truth.md` file is the project's source of truth. It tells your AI assistant what the project is, what decisions have already been made, what still needs to be asked, what progress has happened, and whether your AI assistant has permission to start working.
+
+### 2. 25-question flow
+
+When the project is new (or the answers are missing), your AI assistant runs a 25-question planning flow. Questions are asked one at a time, with short multiple-choice options and a clearly marked recommended answer. Each answer is recorded with the question, options, recommendation, and the locked decision.
+
+### 3. Chunk plan
+
+After the 25 questions, your AI assistant breaks the project into many small execution chunks. Each chunk has a goal, likely tools, a verification step, and a status. Before manual work, your AI assistant looks for existing scripts, CLIs, Makefiles, or tests — and prefers deterministic tool execution over repetitive AI-only work.
+
+### 4. Progress log
+
+As work happens, meaningful progress is logged back into the same file. The file stays the source of truth from start to finish.
+
+```
+   ground-truth.md
+        │
+        ▼
+   AI assistant reads
+        │
+        ▼
+   25 planning questions
+   (one at a time, with
+   recommended answer)
+        │
+        ▼
+   Summary + remaining gaps
+   "Is this enough?"
+        │
+        ▼
+   Chunk plan
+        │
+        ▼
+   "Do I have your
+   permission to start?"
+        │
+        ▼
+   Work in chunks,
+   log progress
+```
+
+## See it in action
+
+The repository's own [`ground-truth.md`](./ground-truth.md) is a real, in-progress example — the same file used to plan and build this very repo. Watch the system being applied to itself.
+
+## License
+
+MIT — see [`LICENSE`](./LICENSE).

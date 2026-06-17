@@ -1,0 +1,44 @@
+# ----------------------
+# GitHub Standard .gitignore
+# ----------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.Trash-*
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs and temp
+*.log
+*.tmp
+*.bak
+
+# OS metadata
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Build / dist
+/build/
+/dist/
+/node_modules/
+/target/
