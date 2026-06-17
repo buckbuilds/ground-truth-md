@@ -199,6 +199,7 @@ Permission wording for new work: **“Do I have your permission to start working
 - Each chunk should be small enough to run, verify, and log independently, and should identify likely scripts/tools/commands first.
 - Before doing manual work in a chunk, Hermes should look for existing scripts, CLIs, Makefiles, tests, or automation and prefer deterministic script/tool execution over repetitive AI-only work.
 - Before starting work, Hermes should ask: “Do I have your permission to start working from this ground truth and chunk plan?”
+- The user can grant permission for all chunks at once by responding with `/goal complete all the chunks` (or similar bulk-permission phrasing).
 - Hermes should not start project work until permission is granted.
 ### 2026-06-07
 - Updated the reusable ground-truth template decision: after the enough-information checkpoint, Hermes must break projects into many small execution chunks before asking permission to start.

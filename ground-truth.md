@@ -211,6 +211,7 @@ Permission wording for new work: **“Do I have your permission to start working
 - Each chunk should be small enough to run, verify, and log independently, and should identify likely scripts/tools/commands first.
 - Before doing manual work in a chunk, Hermes should look for existing scripts, CLIs, Makefiles, tests, or automation and prefer deterministic script/tool execution over repetitive AI-only work.
 - Before starting work, Hermes should ask: “Do I have your permission to start working from this ground truth and chunk plan?”
+- The user can grant permission for all chunks at once by responding with `/goal complete all the chunks` (or similar bulk-permission phrasing).
 - Hermes should not start project work until permission is granted.
 ### 2026-06-07
 - Updated the reusable ground-truth template decision: after the enough-information checkpoint, Hermes must break projects into many small execution chunks before asking permission to start.
@@ -228,6 +229,7 @@ Permission wording for new work: **“Do I have your permission to start working
 ### 2026-06-17 (later)
 - Replaced the lean `templates/ground-truth.md` (44 lines, simplified) with the fuller meta-template the user authored (205 lines, includes the 10-question design history + locked decisions + clean per-project structure). Visitors now copy the same file that originally seeded the system, so the rationale for each rule ships with the rule.
 - Updated README quickstart to match the actual workflow: create folder → drop file → tell AI to read it → AI does the rest. The 10-question history and locked decisions are for the AI to read, not the visitor.
+- Added a new locked decision: the user can grant permission for all chunks at once by responding to the permission prompt with `/goal complete all the chunks` (or similar bulk-permission phrasing). Rule added to both `templates/ground-truth.md` and the live file.
 
 ## 25-Question Planning Flow (Desired Outcome: Display how the ground-truth.md system works for any project, and post it on GitHub)
 
